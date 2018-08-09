@@ -1,8 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import Game from './components/game';
+import Card from './components/card';
 import registerServiceWorker from './registerServiceWorker';
 
-ReactDOM.render(<Game />, document.getElementById('root'));
+ReactDOM.render(<Card />, document.getElementById('root'));
 registerServiceWorker();
