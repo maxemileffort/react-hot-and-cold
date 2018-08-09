@@ -8,6 +8,19 @@ export default class Header extends React.Component{
         }
     }
 
+    showInstructions(){
+        this.setState({
+            instructions: 'display'
+        })
+    }
+
+    hideInstructions(){
+        this.setState({
+            instructions: 'hide'
+        })
+    }
+    
+
     render(){
         if(this.state.instructions === 'display'){
             return(
@@ -17,6 +30,7 @@ export default class Header extends React.Component{
                     <p>If you're not, you're cold. Guess again!</p>
                     <p>If you're right, bingo! You win!</p>
                     <p>Hint: Number is between 1 and 100.</p>
+                    <button onClick={()=>this.hideInstructions()}>Hide</button>
                 </div>
             )
         }
@@ -24,8 +38,8 @@ export default class Header extends React.Component{
             return(
             <div>
                 <h1>Hot or Cold</h1>
-                <h3>How to Play</h3>
-                <h3>New Game</h3>
+                <h3 onClick={()=>this.showInstructions()}>How to Play</h3>
+                <h3 onClick={this.props.reset}>New Game</h3>
             </div>
         )
         }
