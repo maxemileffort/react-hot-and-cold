@@ -2,6 +2,11 @@ language: node_js
 node_js: node
 cache:
   directories:
-    - node_modules
+  - node_modules
 env:
-  - CI=true
+- CI=true
+deploy:
+  provider: heroku
+  api_key:
+    secure: UmR56dE036Ll91hJHU/i5XZT4CpxfKas092lAMGw+kP2chBiUOlzDzaM0yqB/3U+0Quog1IkCbSnPRCPTvF4JZpTv3LPPPiZ7Tk/pCTDMTUvCyYKse3xdCBp241hzAXP0d4IuvYn0Pg6Ah4h0JOHR1QllWjCHplTuXrWPhm6YWgiFiwD2xlMpbF2sbBsxVTtqYVG0Ee20e9sawELSjRom1ZSRtajdryE1NshPuwZuFl1JFVXZpljk1qupg+BneOetCw26OTJKy1F3jYAtgWADpZd0c+kXXpjOOklhdtxqV8u/WqYpvwTHjgnjLqAcDCPGXnGlXClCmVkCN5PIPSZNWYw5dPuzwe0cQNfmxC2YJpel1vkL7LHIOvd0AohkcfDzFnOER5F3UGzqPmpEq6ziZTxHLc5YRE16duoYmYyFTrCw0eITjAWMYtD/r0FF2g4ieWxE+gOS4tLzWwxJlDPsCnL3nhtf1hpyEAXT3jk5wDdXA5j4zONuqXoEiaMtyBX8HBsQZONNcBzps+Oxt86X+8hCfo8cQn5DrJkRPk7m6R2MvkIhEhCPpFp0laMADqYcuPjtPWsJ4EL0QSKNcdZIDLfkO2oHZhFkY8YqBWCpJ85gcjvQKD8mDoJ0o1E8vWSY/uiBoiyBOVpxBl9Ap5R6d7FitySAX3kGIt8zqyGH24=
+  app: maxemileffort-hot-cold
